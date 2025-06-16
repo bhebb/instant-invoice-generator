@@ -1,1 +1,9 @@
-// file content placeholder
+site_name: Instant Invoice Generator
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - API: api.md
+  - Models: models.md
+  - Roadmap: roadmap.md

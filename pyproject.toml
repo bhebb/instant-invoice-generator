@@ -1,1 +1,5 @@
-// file content placeholder
+[project]
+name = "instant-invoice-generator"
+version = "0.1.0"
+description = "Backend scaffold for instant-invoice-generator"
+authors = [{name="Ton Nom", email="ton@email.com"}]

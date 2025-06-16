@@ -1,1 +1,3 @@
-// file content placeholder
+.venv/
+__pycache__/
+.env

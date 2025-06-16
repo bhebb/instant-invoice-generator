@@ -1,1 +1,6 @@
-// file content placeholder
+fastapi
+uvicorn
+pydantic
+mkdocs
+mkdocs-material
+pytest
