@@ -1,1 +1,3 @@
-## Architecture
+# Architecture
+
+Structure technique du projet.

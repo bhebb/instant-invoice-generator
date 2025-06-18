@@ -1,1 +1,3 @@
-# Instant Invoice Generator
+# Présentation
+
+Brève description du projet.

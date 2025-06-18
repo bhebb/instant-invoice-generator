@@ -4,3 +4,4 @@ pydantic
 mkdocs
 mkdocs-material
 pytest
+python-jose

@@ -1,1 +1,3 @@
-## API
+# API
+
+Description des endpoints principaux.
