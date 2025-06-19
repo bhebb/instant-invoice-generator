@@ -1,0 +1,42 @@
+name: 🚀 Deploy Python API to Railway (or similar)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "app/**"
+      - "requirements.txt"
+      - "Dockerfile"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run Tests
+        run: |
+          source .venv/bin/activate
+          pytest
+
+      - name: Deploy via Railway (or custom script)
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          curl -sSL https://railway.app/new/project/deploy \
+            -H "Authorization: Bearer $RAILWAY_TOKEN" \
+            -d '{"service":"invoice-api","repo":"https://github.com/bhebb/instant-invoice-generator"}'

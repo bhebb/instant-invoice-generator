@@ -5,3 +5,5 @@ mkdocs
 mkdocs-material
 pytest
 python-jose
+httpx
+passlib

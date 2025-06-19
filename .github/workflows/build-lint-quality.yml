@@ -1,0 +1,44 @@
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+          pip install flake8 black pytest
+
+      - name: Lint with flake8
+        run: |
+          source .venv/bin/activate
+          flake8 .
+
+      - name: Format check with Black
+        run: |
+          source .venv/bin/activate
+          black --check .
+
+      - name: Run tests with coverage
+        run: |
+          source .venv/bin/activate
+          pytest --cov=src tests/
+
+      - name: Upload coverage to Codecov (optional)
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
