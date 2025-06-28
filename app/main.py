@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.core.api import ping_api, auth_api, invoice_api  # ajoute tous tes routers ici
+from app.api import ping_api, auth_api, invoice_api 
 
 app = FastAPI(
     title="Instant Invoice Generator",
