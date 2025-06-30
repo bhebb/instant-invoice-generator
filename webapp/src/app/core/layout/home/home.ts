@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ClerkSignInComponent } from 'ngx-clerk';
 
 @Component({
@@ -6,5 +6,6 @@ import { ClerkSignInComponent } from 'ngx-clerk';
   imports: [ClerkSignInComponent],
   templateUrl: './home.html',
   styleUrl: './home.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {}

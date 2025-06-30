@@ -18,6 +18,11 @@ export const routes: Routes = [
           import('./features/invoices/invoices.routes').then((m) => m.ROUTES),
         canActivate: [ClerkAuthGuardService],
       },
+      {
+        path: 'settings',
+        loadChildren: () =>
+          import('./features/settings/settings.routes').then((m) => m.ROUTES),
+      },
     ],
   },
 ];

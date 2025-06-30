@@ -1,13 +1,20 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  ChangeDetectionStrategy,
+} from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ClerkService, UserResource } from 'ngx-clerk';
-import { Observable, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
 @Component({
   selector: 'frinay-header',
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, RouterModule],
   templateUrl: './header.html',
   styleUrl: './header.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header implements OnInit {
   user$: ReplaySubject<UserResource> = new ReplaySubject(); // Replace 'any' with the appropriate type for user$

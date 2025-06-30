@@ -1,13 +1,36 @@
 <aside class="w-64 min-h-screen bg-gray-100 p-4">
   <nav class="flex flex-col gap-4">
-    <a routerLink="/home" routerLinkActive="font-bold text-indigo-600"
+    <a routerLink="/" routerLinkActive="font-bold text-indigo-600"
       >🏠 Accueil</a
     >
     <a routerLink="/invoices" routerLinkActive="font-bold text-indigo-600"
       >🧾 Factures</a
     >
-    <a routerLink="/settings" routerLinkActive="font-bold text-indigo-600"
-      >⚙️ Paramètres</a
-    >
+    <div>
+      <span class="block mb-1 text-gray-600 font-semibold">⚙️ Paramètres</span>
+      <ul class="ml-4 space-y-1 text-sm">
+        <li>
+          <a
+            routerLink="/settings/invoice-template"
+            routerLinkActive="font-bold text-indigo-600"
+            >🧾 Modèles de facture</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/settings/email-template"
+            routerLinkActive="font-bold text-indigo-600"
+            >📧 Modèles d’email</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/settings/other"
+            routerLinkActive="font-bold text-indigo-600"
+            >🔧 Autres</a
+          >
+        </li>
+      </ul>
+    </div>
   </nav>
 </aside>
