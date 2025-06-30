@@ -1,17 +1,17 @@
 <aside class="w-64 min-h-screen bg-gray-100 p-4">
   <nav class="flex flex-col gap-4">
-    <a routerLink="/" routerLinkActive="font-bold text-indigo-600"
-      >🏠 Accueil</a
-    >
-    <a routerLink="/invoices" routerLinkActive="font-bold text-indigo-600"
-      >🧾 Factures</a
-    >
+    <a routerLink="/" routerLinkActive="font-bold text-indigo-600">{{
+      "HOME" | translate
+    }}</a>
+    <a routerLink="/invoices" routerLinkActive="font-bold text-indigo-600">{{
+      "INVOICES" | translate
+    }}</a>
     <div>
       <span class="block mb-1 text-gray-600 font-semibold">⚙️ Paramètres</span>
       <ul class="ml-4 space-y-1 text-sm">
         <li>
           <a
-            routerLink="/settings/invoice-template"
+            routerLink="/invoices/invoice-template"
             routerLinkActive="font-bold text-indigo-600"
             >🧾 Modèles de facture</a
           >

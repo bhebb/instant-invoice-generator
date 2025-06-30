@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { InvoiceTemplate } from './invoice-template/invoice-template';
 
 export const ROUTES: Routes = [
   {
@@ -6,4 +7,5 @@ export const ROUTES: Routes = [
     loadComponent: () =>
       import('./invoices-list/invoices').then((m) => m.Invoices),
   },
+  { path: 'invoice-template', component: InvoiceTemplate },
 ];

@@ -6,6 +6,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ClerkService, UserResource } from 'ngx-clerk';
 import { ReplaySubject } from 'rxjs';
 
@@ -20,8 +21,14 @@ export class Header implements OnInit {
   user$: ReplaySubject<UserResource> = new ReplaySubject(); // Replace 'any' with the appropriate type for user$
 
   clerkService = inject(ClerkService);
+  translate = inject(TranslateService);
 
   ngOnInit(): void {
     this.user$ = this.clerkService.user$ as ReplaySubject<UserResource>;
+  }
+
+  changeLang(event: any) {
+    console;
+    this.translate.use(event?.target?.value);
   }
 }
