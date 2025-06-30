@@ -7,3 +7,6 @@ pytest
 python-jose
 httpx
 passlib
+clerk-backend-api===3.0.3
+python-dotenv
+

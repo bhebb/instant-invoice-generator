@@ -3,20 +3,23 @@ theme:
   name: material
 
 nav:
-  - 🏠 Présentation: index.md
-  - 🧱 Architecture: architecture.md
-  - 🔐 Authentification: auth.md
-  - 📡 API:
-      - Endpoints: api.md
-      - Exemples d'appels: api-examples.md
-  - 🗃️ Modèles de données: models.md
-  - 🛠️ Utilisation:
-      - Configuration: config.md
-      - Interface CLI: cli.md
-  - 🧭 Planification:
-      - Roadmap: roadmap.md
-      - Journal des changements: changelog.md
-
+  - Accueil: index.md
+  - Projects:
+      - Backend:
+          - Overview: projects/backend/index.md
+          - Auth:
+              - Authentication: projects/backend/auth.md
+          - Architecture: projects/backend/architecture.md
+          - 📡 API:
+              - Endpoints: projects/backend/api.md
+              - Exemples d'appels: projects/backend/api-examples.md
+          - 🗃️ Modèles de données: projects/backend/models.md
+          - 🛠️ Utilisation:
+              - Configuration: projects/backend/config.md
+              - Interface CLI: projects/backend/cli.md
+          - 🧭 Planification:
+              - Roadmap: projects/backend/roadmap.md
+              - Journal des changements: projects/backend/changelog.md
 plugins:
   - search
   - macros

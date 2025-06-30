@@ -10,6 +10,7 @@ fi
 
 # Active le venv
 source .venv/bin/activate
+export $(cat .env | grep -v '^#' | xargs)
 
 # Lancer l'API
 uvicorn app.main:app --reload
