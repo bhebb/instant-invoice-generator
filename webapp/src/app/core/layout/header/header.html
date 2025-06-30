@@ -1,0 +1,11 @@
+<header class="w-full p-4 bg-white shadow flex justify-between items-center">
+  <div class="text-xl font-bold text-indigo-600">Instant Invoice Generator</div>
+  <div class="flex items-center gap-4">
+    <span class="text-sm">Bienvenue {{ (user$ | async)?.fullName }}</span>
+    <img
+      src="https://i.pravatar.cc/32"
+      alt="Avatar"
+      class="rounded-full w-8 h-8"
+    />
+  </div>
+</header>
