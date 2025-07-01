@@ -9,12 +9,23 @@ from fastapi.requests import Request
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 # from app.core.security import clerk_auth
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 security = HTTPBearer()
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],  # ton frontend Angular
+    allow_credentials=True,
+    allow_methods=["*"],  # GET, POST, OPTIONS, etc.
+    allow_headers=["*"],  # Authorization, Content-Type, etc.
+)
+
 
 # Personnaliser le schéma OpenAPI pour inclure l’authentification
 from fastapi.openapi.utils import get_openapi
@@ -67,4 +78,4 @@ async def general_exception_handler(request: Request, exc: Exception):
 # Monte tous les routers ici
 app.include_router(ping_api.router, prefix="/ping", tags=["Ping"])
 app.include_router(auth_api.router, prefix="/auth", tags=["Auth"])
-app.include_router(invoice_api.router, prefix="/invoices", tags=["Factures"])
+app.include_router(invoice_api.router, prefix="/api/invoices", tags=["Factures"])
