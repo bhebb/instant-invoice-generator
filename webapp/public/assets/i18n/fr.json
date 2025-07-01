@@ -1,8 +1,18 @@
 {
-  "HOME": "Accueil",
-  "INVOICES": "Factures",
-  "SETTINGS": "Paramètres",
-  "EMAIL_TEMPLATE": "Modèles d’email",
-  "INVOICE_TEMPLATE": "Modèles de facture",
-  "OTHER": "Autres"
+  "welcome": "Bienvenue",
+  "title": "Générateur intelligent de factures",
+  "productName": "QuickInvoce",
+  "description": "Générez et gérez vos factures en toute simplicité.",
+  "signInTitle": "Connectez-vous pour continuer vers Instant Invoice Generator",
+  "language": "Langue",
+  "english": "Anglais",
+  "french": "Français",
+  "logout": "Se déconnecter",
+  "home": "Accueil",
+  "invoices": "Factures",
+  "settings": "Paramètres",
+  "invoiceTemplates": "Modèles de facture",
+  "emailTemplates": "Modèles d’email",
+  "other": "Autres",
+  "allRightsReserved": "Tous droits réservés."
 }

@@ -1,9 +1,12 @@
-<div class="p-6">
-  <h1 class="text-2xl font-semibold mb-4">Bienvenue 👋</h1>
-  <p class="text-gray-700">
-    Générez et gérez vos factures en toute simplicité.
+<div
+  class="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-gray-50 text-center px-4"
+>
+  <h1 class="text-3xl font-semibold mb-2">{{ "welcome" | translate }}</h1>
+  <p class="text-gray-600 mb-8">
+    {{ "description" | translate }}
   </p>
-</div>
-<div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-  <clerk-sign-in></clerk-sign-in>
+
+  <div class="bg-white p-6 rounded shadow-lg w-full max-w-md">
+    <clerk-sign-in></clerk-sign-in>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Layout } from './core/layout/layout';
-import { ClerkAuthGuardService } from 'ngx-clerk';
+import { ClerkAuthGuardService } from '@bhebb/ngx-clerk';
 
 export const routes: Routes = [
   {

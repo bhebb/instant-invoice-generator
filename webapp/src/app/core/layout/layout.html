@@ -2,7 +2,9 @@
   <frinay-header></frinay-header>
 
   <div class="flex flex-1">
+    @if (auth.isSignedIn()) {
     <frinay-sidebar class="w-64"></frinay-sidebar>
+    }
     <main class="flex-1 p-4 bg-gray-50">
       <router-outlet></router-outlet>
     </main>

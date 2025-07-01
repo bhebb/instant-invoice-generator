@@ -26,11 +26,12 @@
     "@angular/forms": "^20.0.0",
     "@angular/platform-browser": "^20.0.0",
     "@angular/router": "^20.0.0",
+    "@bhebb/ngx-clerk": "file:../../ngx-clerk/dist/ngx-clerk/bhebb-ngx-clerk-1.0.2.tgz",
+    "@clerk/localizations": "^3.17.2",
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
     "@tailwindcss/postcss": "^4.1.11",
     "daisyui": "^5.0.43",
-    "ngx-clerk": "^0.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

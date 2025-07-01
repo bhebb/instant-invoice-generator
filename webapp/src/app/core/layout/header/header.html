@@ -1,16 +1,21 @@
-<header class="w-full p-4 bg-white shadow flex justify-between items-center">
-  <div class="text-xl font-bold text-indigo-600">Instant Invoice Generator</div>
-  <div class="flex items-center gap-4">
-    <span class="text-sm">Bienvenue {{ (user$ | async)?.fullName }}</span>
-    <img
-      src="https://i.pravatar.cc/32"
-      alt="Avatar"
-      class="rounded-full w-8 h-8"
-    />
+<header
+  class="w-full flex items-center justify-between px-6 py-4 shadow bg-white"
+>
+  <div class="flex items-center gap-2">
+    <img src="/assets/img/logo.svg" alt="Logo" class="w-8 h-8" />
+    <h1 class="text-2xl font-bold text-indigo-600">
+      {{ "productName" | translate }}
+    </h1>
   </div>
 
-  <select (change)="changeLang($event)" class="p-2 border rounded">
-    <option value="fr">🇫🇷 Français</option>
-    <option value="en">🇺🇸 English</option>
-  </select>
+  <div class="flex items-center gap-4">
+    <button
+      class="px-2 py-1 border rounded hover:bg-gray-100 text-sm"
+      (click)="switchLang(currentLang === 'fr' ? 'en' : 'fr')"
+    >
+      @if (currentLang === "fr") { 🇫🇷 {{ "english" | translate }} } @else { 🇺🇸
+      {{ "french" | translate }} }
+    </button>
+    <clerk-user-button></clerk-user-button>
+  </div>
 </header>

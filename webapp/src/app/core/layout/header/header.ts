@@ -1,34 +1,30 @@
-import { AsyncPipe } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   inject,
   OnInit,
-  ChangeDetectionStrategy,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { ClerkService, UserResource } from 'ngx-clerk';
-import { ReplaySubject } from 'rxjs';
+import { ClerkUserButtonComponent } from '@bhebb/ngx-clerk';
+import { Language } from '../../services/language';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'frinay-header',
-  imports: [AsyncPipe, RouterModule],
+  imports: [RouterModule, ClerkUserButtonComponent, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header implements OnInit {
-  user$: ReplaySubject<UserResource> = new ReplaySubject(); // Replace 'any' with the appropriate type for user$
-
-  clerkService = inject(ClerkService);
-  translate = inject(TranslateService);
+  translate = inject(Language);
+  currentLang = 'fr';
 
   ngOnInit(): void {
-    this.user$ = this.clerkService.user$ as ReplaySubject<UserResource>;
+    this.currentLang = this.translate.currentLang;
   }
 
-  changeLang(event: any) {
-    console;
-    this.translate.use(event?.target?.value);
+  switchLang(newLang: 'fr' | 'en'): void {
+    this.translate.setLang(newLang);
   }
 }

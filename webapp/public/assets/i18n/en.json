@@ -1,8 +1,18 @@
 {
-  "HOME": "Home",
-  "INVOICES": "Invoices",
-  "SETTINGS": "Settings",
-  "EMAIL_TEMPLATE": "Email templates",
-  "INVOICE_TEMPLATE": "Invoice templates",
-  "OTHER": "Other"
+  "welcome": "Welcome",
+  "productName": "QuickInvoce",
+  "title": "Smart Invoice Generator",
+  "description": "Generate and manage your invoices with ease.",
+  "signInTitle": "Sign in to continue to Instant Invoice Generator",
+  "language": "Language",
+  "english": "English",
+  "french": "Français",
+  "logout": "Sign out",
+  "home": "Home",
+  "invoices": "Invoices",
+  "settings": "Settings",
+  "invoiceTemplates": "Invoice templates",
+  "emailTemplates": "Email templates",
+  "other": "Other",
+  "allRightsReserved": "All rights reserved."
 }

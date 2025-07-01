@@ -1,33 +1,32 @@
 <aside class="w-64 min-h-screen bg-gray-100 p-4">
   <nav class="flex flex-col gap-4">
     <a routerLink="/" routerLinkActive="font-bold text-indigo-600">{{
-      "HOME" | translate
-    }}</a>
-    <a routerLink="/invoices" routerLinkActive="font-bold text-indigo-600">{{
-      "INVOICES" | translate
+      "home" | translate
     }}</a>
     <div>
-      <span class="block mb-1 text-gray-600 font-semibold">⚙️ Paramètres</span>
+      <span class="block mb-1 text-gray-600 font-semibold"
+        >⚙️ {{ "settings" | translate }}</span
+      >
       <ul class="ml-4 space-y-1 text-sm">
         <li>
           <a
             routerLink="/invoices/invoice-template"
             routerLinkActive="font-bold text-indigo-600"
-            >🧾 Modèles de facture</a
+            >🧾 {{ "invoiceTemplates" | translate }}</a
           >
         </li>
         <li>
           <a
             routerLink="/settings/email-template"
             routerLinkActive="font-bold text-indigo-600"
-            >📧 Modèles d’email</a
+            >📧 {{ "emailTemplates" | translate }}</a
           >
         </li>
         <li>
           <a
             routerLink="/settings/other"
             routerLinkActive="font-bold text-indigo-600"
-            >🔧 Autres</a
+            >🔧 {{ "other" | translate }}</a
           >
         </li>
       </ul>
